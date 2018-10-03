@@ -3,26 +3,26 @@
 Materiais utilizados:
 
 Raspberry pi3 <br>
-display lcd 7"
-vidro 15x9cm
-insufilm g5 espelhado
-infravermelho
-sensor de umidade am2302
-fita led rgb
-cola quente
-superbonder
+display lcd 7"<br>
+vidro 15x9cm<br>
+insufilm g5 espelhado<br>
+infravermelho<br>
+sensor de umidade am2302<br>
+fita led rgb<br>
+cola quente<br>
+superbonder<br>
 
 Equipamentos:
 
-impressora 3D
-Furadeira
+impressora 3D<br>
+Furadeira<br>
 
 Instruções:
 
 1-Moldura:
 
-Imprima os arquivos Peça1, tampa e tras
-Com a furadeira, faça os furos para o encaixe do infravermelho.
+Imprima os arquivos Peça1, tampa e tras<br>
+Com a furadeira, faça os furos para o encaixe do infravermelho.<br>
 
 2-Espelho:
 
@@ -41,7 +41,6 @@ Modulos utilizados:
 
     https://github.com/MichMich/MagicMirror/tree/master/modules/default/clock
     config:
-
 
 
     4.2 Calendar
@@ -66,7 +65,7 @@ Modulos utilizados:
 
     4.4 CurrentWeather
 
-{
+    {
 			module: "currentweather",
 			position: "top_right",
 			config: {
@@ -76,9 +75,9 @@ Modulos utilizados:
 			}
 		},
         
-4.5 Weather Forescast
+        4.5 Weather Forescast
 
-{
+    {
 			module: "weatherforecast",
 			position: "top_right",
 			header: "Weather Forecast",
@@ -89,9 +88,9 @@ Modulos utilizados:
 			}
 		},
         
-4.6 News
+        4.6 News
 
-{
+    {
 			module: "newsfeed",
 			position: "bottom_bar",
 			config: {
@@ -106,6 +105,6 @@ Modulos utilizados:
 			}
 		},
         
-4.7
+        4.7
 
 
