@@ -2,7 +2,7 @@
 
 O trabalho do terceiro bimestre de microcoontroladores teve por objetivo utilizar o microcomputador Raspberry Pi 3 e o GPIO (general-purpose input/output), que é responsável por fazer a comunicação de entradas e saídas de sinais digitais, em seu funcionamento. 
 O projeto desenvolvido foi um espelho inteligente. Esse espelho além de refletir a imagem auxilia no dia-a-dia de uma pessoa.
-Nele é possível interagir diretamente com o usuário através do infravermelho que irá detectar movimentação próxima ao espelho e ativar a tela de LCD(ou leds) que estará através desse espelho.
+Nele é possível interagir diretamente com o usuário através do infravermelho que detecta movimentação próxima ao espelho e ativa a tela de LCD(ou leds) que esta através desse espelho.
 Essa tela pode ser controlada através do WiFi pelo celular, se utilizando do ip do raspberry e mostrará o horário atual, a temperatura ambiente,previsão do tempo, frases do dia, notícias, calendário de feriados e um organizador de tarefas (Trello).
 
 <h2>Materiais utilizados:</h2>
@@ -48,7 +48,7 @@ Após isso é preciso realizar o setup de cada um no arquivo config.js na pasta 
 
 <h3>Modulos utilizados:</h3>
 
-    <h4>4.1 Trello</h4>
+   <h4>4.1 Trello</h4>
     https://github.com/Jopyth/MMM-Trello
 	
 	{
@@ -62,7 +62,7 @@ Após isso é preciso realizar o setup de cada um no arquivo config.js na pasta 
         }
     },
 
-   <h4>4.2 Calendar<h4>
+   <h4>4.2 Calendar</h4>
 	já vem com o magic mirror padrão
 
     {
@@ -139,8 +139,8 @@ Após isso é preciso realizar o setup de cada um no arquivo config.js na pasta 
 			}
 		},
         
-<h4>4.7 IP Na tela
-	   recurso muito util para a utilização mais facil do modulo de remote control.
+<h4>4.7 IP Na tela</h4>
+	   recurso muito útil para a utilização mais facil do modulo de remote control.
 
 	   https://github.com/fewieden/MMM-ip
 	   {
