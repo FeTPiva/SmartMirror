@@ -1,5 +1,10 @@
 # Smart Mirror v1
 
+O trabalho do terceiro bimestre de microcoontroladores teve por objetivo utilizar o microcomputador Raspberry Pi 3 e o GPIO (general-purpose input/output), que é responsável por fazer a comunicação de entradas e saídas de sinais digitais, em seu funcionamento. 
+O projeto desenvolvido foi um espelho inteligente. Esse espelho além de refletir a imagem auxilia no dia-a-dia de uma pessoa.
+Nele é possível interagir diretamente com o usuário através do infravermelho que irá detectar movimentação próxima ao espelho e ativar a tela de LCD(ou leds) que estará através desse espelho.
+Essa tela pode ser controlada através do WiFi pelo celular, se utilizando do ip do raspberry e mostrará o horário atual, a temperatura ambiente,previsão do tempo, frases do dia, notícias, calendário de feriados e um organizador de tarefas (Trello).
+
 <h2>Materiais utilizados:</h2>
 
 Raspberry pi3 <br>
@@ -27,7 +32,8 @@ Com a furadeira, faça os furos para o encaixe do infravermelho onde achar mais 
 
 <h3>2-Espelho:</h3>
 
-Utilizando água e sabão limpe muito bem o vidro e então com ele seco e o insufilme cortado no tamanho adequado, cole-o com cuidado para não fazer bolhas(utilize uma régua para evitar as bolhas)
+Utilizando água e sabão limpe muito bem o vidro e então com ele seco e o insufilme cortado no tamanho adequado,
+cole-o com cuidado para não fazer bolhas(utilize uma régua para evitar as bolhas)
 
 <h3>4-Raspberry:</h3>
 
@@ -36,7 +42,8 @@ https://magicmirror.builders/ e pelo cmd do linux execute o comando bash -c "$(c
 para fazer download e instalar o Magic Mirror.
 dica para download de forma rápida:
 comando no cmd 'git clone urlDoGit.git '
-No proprio site haverão vários possiveis módulos que poderão ser instalados. Para cada um deles deverá ser utilizado o comando npm install para que eles sejam instalados. Após isso é preciso realizar o setup de cada um no arquivo config.js na pasta config. Abaixo os módulos utilizados c suas respectivas configurações a serem adicionadas no arquivo config.js
+No proprio site haverão vários possiveis módulos que poderão ser instalados. Para cada um deles deverá ser utilizado o comando npm install para que eles sejam instalados. 
+Após isso é preciso realizar o setup de cada um no arquivo config.js na pasta config. Abaixo os módulos utilizados c suas respectivas configurações a serem adicionadas no arquivo config.js
 
 
 <h3>Modulos utilizados:</h3>
@@ -55,7 +62,7 @@ No proprio site haverão vários possiveis módulos que poderão ser instalados.
         }
     },
 
-    <h4>4.2 Calendar<h4>
+   <h4>4.2 Calendar<h4>
 	já vem com o magic mirror padrão
 
     {
@@ -74,7 +81,7 @@ No proprio site haverão vários possiveis módulos que poderão ser instalados.
 
 	neste modulo pode ser alterado o site chamado na url para algum de preferencia.
 
-    <h4>4.3 Controle infravermelho</h4>
+   <h4>4.3 Controle infravermelho</h4>
 	https://github.com/paviro/MMM-PIR-Sensor
 
 
@@ -87,7 +94,7 @@ No proprio site haverão vários possiveis módulos que poderão ser instalados.
 
 	Neste foi utilizado o pino 21 para controle do sensor
 
-    <h4>4.4 CurrentWeather</h4>
+   <h4>4.4 CurrentWeather</h4>
 	já vem com o magic mirror padrão
 
     {
@@ -100,7 +107,7 @@ No proprio site haverão vários possiveis módulos que poderão ser instalados.
 			}
 		},
         
-    <h4>4.5 Weather Forescast</h4>
+   <h4>4.5 Weather Forescast</h4>
 	já vem com o magic mirror padrão
 
     {
@@ -114,7 +121,7 @@ No proprio site haverão vários possiveis módulos que poderão ser instalados.
 			}
 		},
         
-	<h4>4.6 News</h4>
+   <h4>4.6 News</h4>
 	já vem com o magic mirror padrão
 
     {
@@ -132,7 +139,7 @@ No proprio site haverão vários possiveis módulos que poderão ser instalados.
 			}
 		},
         
-	   <h4>4.7 IP Na tela
+<h4>4.7 IP Na tela
 	   recurso muito util para a utilização mais facil do modulo de remote control.
 
 	   https://github.com/fewieden/MMM-ip
@@ -147,8 +154,10 @@ No proprio site haverão vários possiveis módulos que poderão ser instalados.
 		}
 
 
-       <h4>4.8 Remote Control</h4>
-	   Este módulo é muito importante e útil no projeto. Através dele é possivel controlar todos os módulos sendo exibidos na tela do magic mirror. basta usar o link  http://www.xxx.y.zzz:8080/remote.html onde w, x, y e z formarão o ip sendo mostrado na tela do magic mirror. Vale lembrar que o raspberry e o dispositivo acessando o link DEVEM estar na mesma rede.
+   <h4>4.8 Remote Control</h4>
+	   Este módulo é muito importante e útil no projeto.
+	   Através dele é possivel controlar todos os módulos sendo exibidos na tela do magic mirror. basta usar o link  http://www.xxx.y.zzz:8080/remote.html onde w, x, y e z formarão o ip sendo mostrado na tela do magic mirror.
+	   Vale lembrar que o raspberry e o dispositivo acessando o link DEVEM estar na mesma rede.
 
 	   download: https://github.com/Jopyth/MMM-Remote-Control
 
@@ -160,10 +169,10 @@ No proprio site haverão vários possiveis módulos que poderão ser instalados.
 	                      // Default, when address config is left out, is "localhost"
 		port: 8080,
 		ipWhitelist: [], // Set [] to allow all IP addresses
-	                                                       // or add a specific IPv4 of 192.168.1.5 :
-	                                                       // ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.1.5"],
-	                                                       // or IPv4 range of 192.168.3.0 --> 192.168.3.15 use CIDR format :
-	                                                       // ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.3.0/28"],
+	                     // or add a specific IPv4 of 192.168.1.5 :
+	                     // ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.1.5"],
+	                     // or IPv4 range of 192.168.3.0 --> 192.168.3.15 use CIDR format :
+	                     // ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.3.0/28"],
 
 		language: "en",
 		timeFormat: 24,
@@ -196,7 +205,7 @@ No proprio site haverão vários possiveis módulos que poderão ser instalados.
 				}
 		},
 
-		<h4>4.10 Local Temperature</h4>
+   <h4>4.10 Local Temperature</h4>
 		https://github.com/glitch452/MMM-LocalTemperature
 
 		{
@@ -209,7 +218,8 @@ No proprio site haverão vários possiveis módulos que poderão ser instalados.
         	},
 		{
 		
-		Neste há um setup extra. Para habilitar a leitura de temperatura/úmidade é preciso ir na pasta do módulo e editar seu arquivo de mesmo nome.js. Lá alterar os campos de sensorPin, showTemperature, showHumidity,temperatureText e humidityText para TRUE.
+		Neste há um setup extra. Para habilitar a leitura de temperatura/úmidade é preciso ir na pasta do módulo e editar seu arquivo de mesmo nome.js.
+		 Lá alterar os campos de sensorPin, showTemperature, showHumidity,temperatureText e humidityText para TRUE.
 
 
 
