@@ -2,7 +2,7 @@
 
 O trabalho do terceiro bimestre de microcoontroladores teve por objetivo utilizar o microcomputador Raspberry Pi 3 e o GPIO (general-purpose input/output), que é responsável por fazer a comunicação de entradas e saídas de sinais digitais, em seu funcionamento. 
 O projeto desenvolvido foi um espelho inteligente. Esse espelho além de refletir a imagem auxilia no dia-a-dia de uma pessoa.
-Nele é possível interagir diretamente com o usuário através do infravermelho que detecta movimentação próxima ao espelho e ativa a tela de LCD(ou leds) que esta através desse espelho.
+Nele é possível interagir diretamente com o usuário através do sensor infravermelho que detecta movimentação próxima ao espelho e ativa a tela de LCD(ou leds) que está através desse espelho.
 Essa tela pode ser controlada através do WiFi pelo celular, se utilizando do ip do raspberry e mostrará o horário atual, a temperatura ambiente,previsão do tempo, frases do dia, notícias, calendário de feriados e um organizador de tarefas (Trello).
 
 <h2>Materiais utilizados:</h2>
@@ -35,7 +35,7 @@ Com a furadeira, faça os furos para o encaixe do infravermelho onde achar mais 
 Utilizando água e sabão limpe muito bem o vidro e então com ele seco e o insufilme cortado no tamanho adequado,
 cole-o com cuidado para não fazer bolhas(utilize uma régua para evitar as bolhas)
 
-<h3>4-Raspberry:</h3>
+<h3>3-Raspberry:</h3>
 
 Utilize a instalação NOOBs para o raspberry. Nele, visite o site:
 https://magicmirror.builders/ e pelo cmd do linux execute o comando bash -c "$(curl -sL https://raw.githubusercontent.com/MichMich/MagicMirror/master/installers/raspberry.sh)" 
@@ -48,7 +48,7 @@ Após isso é preciso realizar o setup de cada um no arquivo config.js na pasta 
 
 <h3>Modulos utilizados:</h3>
 
-   <h4>4.1 Trello</h4>
+   <h4>3.1 Trello</h4>
     https://github.com/Jopyth/MMM-Trello
 	
 	{
@@ -62,84 +62,84 @@ Após isso é preciso realizar o setup de cada um no arquivo config.js na pasta 
         }
     },
 
-   <h4>4.2 Calendar</h4>
+   <h4>3.2 Calendar</h4>
 	já vem com o magic mirror padrão
 
     {
-			module: "calendar",
-			header: "US Holidays",
-			position: "top_left",
-			config: {
-				calendars: [
-					{
-						symbol: "calendar-check-o ",
-						url: "webcal://www.calendarlabs.com/templates/ical/US-Holidays.ics"
-					}
-				]
-			}
-		},
+		module: "calendar",
+		header: "US Holidays",
+		position: "top_left",
+		config: {
+			calendars: [
+				{
+					symbol: "calendar-check-o ",
+					url: "webcal://www.calendarlabs.com/templates/ical/US-Holidays.ics"
+				}
+			]
+		}
+	},
 
 	neste modulo pode ser alterado o site chamado na url para algum de preferencia.
 
-   <h4>4.3 Controle infravermelho</h4>
+   <h4>3.3 Controle infravermelho</h4>
 	https://github.com/paviro/MMM-PIR-Sensor
 
 
 	{
-			module: 'MMM-PIR-Sensor',
-			config: {
-				powerSavingDelay: 10
-				}
-		},
+		module: 'MMM-PIR-Sensor',
+		config: {
+			powerSavingDelay: 10
+			}
+	},
 
 	Neste foi utilizado o pino 21 para controle do sensor
 
-   <h4>4.4 CurrentWeather</h4>
+   <h4>3.4 CurrentWeather</h4>
 	já vem com o magic mirror padrão
 
     {
-			module: "currentweather",
-			position: "top_right",
-			config: {
-				location: "Sao Paulo",
-				locationID: "",  //ID from http://www.openweathermap.org/help/city_list.txt
-				appid: "YOUR_OPENWEATHER_API_KEY"
-			}
-		},
+		module: "currentweather",
+		position: "top_right",
+		config: {
+			location: "Sao Paulo",
+			locationID: "",  //ID from http://www.openweathermap.org/help/city_list.txt
+			appid: "YOUR_OPENWEATHER_API_KEY"
+		}
+	},
         
-   <h4>4.5 Weather Forescast</h4>
+   <h4>3.5 Weather Forescast</h4>
 	já vem com o magic mirror padrão
 
     {
-			module: "weatherforecast",
-			position: "top_right",
-			header: "Weather Forecast",
-			config: {
-				location: "Sao Paulo,Brasil",
-				locationID: "3448439",  //ID from http://www.openweathermap.org/help/city_list.txt
-				appid: "ADIQUIRIR_FREE_kEY_NO_SITE_ACIMA"
-			}
-		},
+		module: "weatherforecast",
+		position: "top_right",
+		header: "Weather Forecast",
+		config: {
+			location: "Sao Paulo,Brasil",
+			locationID: "3448439",  //ID from http://www.openweathermap.org/help/city_list.txt
+			appid: "ADIQUIRIR_FREE_kEY_NO_SITE_ACIMA"
+		}
+	},
         
-   <h4>4.6 News</h4>
+   <h4>3.6 News</h4>
 	já vem com o magic mirror padrão
 
     {
-			module: "newsfeed",
-			position: "bottom_bar",
-			config: {
-				feeds: [
-					{
-						title: "Sao Paulo",
-						url: "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"
-					}
-				],
-				showSourceTitle: true,
-				showPublishDate: true
-			}
-		},
+		module: "newsfeed",
+		position: "bottom_bar",
+		config: {
+			feeds: [
+				{
+					title: "Sao Paulo",
+					url: "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+				}
+			],
+			showSourceTitle: true,
+			showPublishDate: true
+		}
+	},
         
-<h4>4.7 IP Na tela</h4>
+  <h4>3.7 IP Na tela</h4>
 	   recurso muito útil para a utilização mais facil do modulo de remote control.
 
 	   https://github.com/fewieden/MMM-ip
@@ -154,7 +154,7 @@ Após isso é preciso realizar o setup de cada um no arquivo config.js na pasta 
 		}
 
 
-   <h4>4.8 Remote Control</h4>
+   <h4>3.8 Remote Control</h4>
 	   Este módulo é muito importante e útil no projeto.
 	   Através dele é possivel controlar todos os módulos sendo exibidos na tela do magic mirror. basta usar o link  http://www.xxx.y.zzz:8080/remote.html onde w, x, y e z formarão o ip sendo mostrado na tela do magic mirror.
 	   Vale lembrar que o raspberry e o dispositivo acessando o link DEVEM estar na mesma rede.
@@ -178,7 +178,7 @@ Após isso é preciso realizar o setup de cada um no arquivo config.js na pasta 
 		timeFormat: 24,
 		units: "metric",
 
-		<h4>4.9 Traffic</h4>
+   <h4>3.9 Traffic</h4>
 		tempo gasto indo de um lugar ao outro
 
 		https://github.com/SamLewis0602/MMM-Traffic
@@ -205,21 +205,24 @@ Após isso é preciso realizar o setup de cada um no arquivo config.js na pasta 
 				}
 		},
 
-   <h4>4.10 Local Temperature</h4>
+   <h4>3.10 Local Temperature</h4>
 		https://github.com/glitch452/MMM-LocalTemperature
 
 		{
-            		module: "MMM-LocalTemperature",
-            		position: "right", // Only add a position if you want this module to display the data
-            		header: "Temperatura",
-            		config: {
-                	sensorPin: 22, // For GPIO 22
-            	}
-        	},
+            module: "MMM-LocalTemperature",
+            position: "right", // Only add a position if you want this module to display the data
+            header: "Temperatura",
+            config: {
+            sensorPin: 22, // For GPIO 22
+            }
+          }, 
 		{
 		
 		Neste há um setup extra. Para habilitar a leitura de temperatura/úmidade é preciso ir na pasta do módulo e editar seu arquivo de mesmo nome.js.
-		 Lá alterar os campos de sensorPin, showTemperature, showHumidity,temperatureText e humidityText para TRUE.
+		Lá alterar os campos de sensorPin, showTemperature, showHumidity,temperatureText e humidityText para TRUE
+
+
+Créditos: Fernanda T. Piva, Adriana Padilla e Nicolas Umaras
 
 
 
