@@ -27,13 +27,13 @@ Furadeira<br>
 <h3>1-Moldura:</h3>
 
 Imprima os arquivos Peça1, tampa e tras na impressora 3D.
-Preferencialmente utilize algum material de cor preta
+Preferencialmente utilize algum material de cor preta.
 Com a furadeira, faça os furos para o encaixe do infravermelho onde achar mais conveniente.
 
 <h3>2-Espelho:</h3>
 
 Utilizando água e sabão limpe muito bem o vidro e então com ele seco e o insufilme cortado no tamanho adequado,
-cole-o com cuidado para não fazer bolhas(utilize uma régua para evitar as bolhas)
+cole-o com cuidado para não fazer bolhas(utilize uma régua para evitar as bolhas), e com cola quente fixe-o à moldura.
 
 <h3>3-Raspberry:</h3>
 
